@@ -36,7 +36,7 @@ const Day = styled.button`
 `;
 const DayText = styled.text`
   font-family: 'Mandali', sans-serif;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 900;
 `;
 const Days = styled.div`
@@ -60,21 +60,14 @@ const Weekday = styled.div`
 const Month = styled.text`
   font-family: 'Mandali', sans-serif;
   color: ${props => props.theme.secondary};
-  font-size: 30px;
-`;
-const Year = styled.text`
-  font-family: 'Mandali', sans-serif;
-  color: ${props => props.theme.main};
-  font-size: 15px;
-  padding-left: 5px;
-  padding-right: 5px;
+  font-size: 2rem;
 `;
 
 const Schedule = () => {
   const [days, setDays] = React.useState([]);
-  const d = moment().add(2, 'months').toDate();
+  const d = moment().add(1, 'months').toDate();
   const popCal = React.useCallback(() => {
-    const d = moment().add(2, 'months').toDate();
+    const d = moment().add(1, 'months').toDate();
     const first = startOfMonth(d).getDay();
     const nDays = getDaysInMonth(d);
     let darr = [];
@@ -127,7 +120,6 @@ const Schedule = () => {
           {d.toLocaleString('default', { month: 'long' }).toLowerCase()}
         </Month>
 
-        <Year>{d.getFullYear()}</Year>
         <Days>
           <Weekday>
             <Text>S</Text>
