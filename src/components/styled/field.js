@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from './container';
 
 const F = styled.input`
   width: 100%;
@@ -21,18 +20,16 @@ const F = styled.input`
 `;
 const Field = props => {
   return (
-    <Container>
-      <F
-        type={props.type}
-        name={props.name}
-        placeholder={props.placeholder}
-        value={props.value}
-        onChange={e => {
-          props.setValue(e.value);
-        }}
-        autoCapitalize='characters'
-      />
-    </Container>
+    <F
+      type={props.type}
+      name={props.name}
+      placeholder={props.placeholder}
+      value={props.value}
+      onChange={e => {
+        props.setValue(e.target.value);
+      }}
+      autoCapitalize='characters'
+    />
   );
 };
 export default Field;
