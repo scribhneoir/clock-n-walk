@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from './container';
-import Text from './text';
 
 const B = styled.button`
   padding: 0.2rem 1rem;
-  margin: 0;
+  margin: 0.5rem;
   background: ${props => props.background || 'transparent'};
   border-radius: 0.5rem;
   border: ${props =>
@@ -24,15 +22,13 @@ const T = styled.text`
 `;
 const Button = props => {
   return (
-    <Container noBorder>
-      <B
-        onClick={() => {
-          props.onClick();
-        }}
-      >
-        <T>{props.children}</T>
-      </B>
-    </Container>
+    <B
+      onClick={() => {
+        props.onClick();
+      }}
+    >
+      <T>{props.children}</T>
+    </B>
   );
 };
 export default Button;

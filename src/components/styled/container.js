@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const C = styled.div`
   display: flex;
   position: relative;
-  flex-direction: column;
+  ${props => (!props.row ? 'flex-direction: column;' : '')}
   align-items: center;
   justify-content: center;
   justify-self: center;
@@ -38,7 +38,11 @@ const B = styled.button`
 const Container = props => {
   return (
     <>
-      <C background={props.background} noBorder={props.noBorder}>
+      <C
+        background={props.background}
+        noBorder={props.noBorder}
+        row={props.row}
+      >
         {props.children}
         {props.button ? (
           <B

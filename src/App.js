@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/screens/login';
 import New from './components/screens/new';
-import Background from './components/styled/background';
+import Schedule from './components/screens/schedule';
 
 const theme = {
   background: '#002b59',
@@ -15,11 +15,11 @@ const theme = {
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Background />
       <Router>
         <Routes>
-          <Route path='/new' element={<New />} />
           <Route path='/' element={<Login />} />
+          <Route path='/new' element={<New />} />
+          <Route path='/schedule' element={<Schedule />} />
         </Routes>
       </Router>
     </ThemeProvider>
