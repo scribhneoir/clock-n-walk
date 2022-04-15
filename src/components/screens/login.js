@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Text from '../styled/text';
 import Container from '../styled/container';
 import Field from '../styled/field';
 import Button from '../styled/button';

@@ -12,7 +12,7 @@ import { IoCaretBack } from 'react-icons/io5';
 const Day = styled.button`
   height: 6.5vh;
   width: 6.5vh;
-  margin: 0.72rem auto;
+  margin: 0.5rem auto;
   background: ${props =>
     props.day === 'c'
       ? props.theme.main
@@ -61,14 +61,11 @@ const Month = styled.text`
   font-family: 'Mandali', sans-serif;
   color: ${props => props.theme.secondary};
   font-size: 30px;
-  padding-left: 5px;
-  padding-right: 5px;
 `;
 const Year = styled.text`
   font-family: 'Mandali', sans-serif;
   color: ${props => props.theme.main};
   font-size: 15px;
-  margin-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
 `;
